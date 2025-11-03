@@ -1,0 +1,44 @@
+# Development Dockerfile for LearningSpace
+FROM python:3.11
+
+# Set environment variables for development
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies and development tools
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        build-essential \
+        curl \
+        git \
+        vim \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements.txt .
+
+# Install dependencies including development tools
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt && \
+    pip install \
+        ipython \
+        jupyter \
+        jupyterlab \
+        black \
+        flake8 \
+        mypy \
+        pytest-cov \
+        ipdb
+
+# Copy application (in dev, usually mounted as volume)
+COPY . .
+
+# Expose Jupyter port
+EXPOSE 8888
+
+# Default to bash for interactive development
+CMD ["/bin/bash"]

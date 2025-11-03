@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # Learning environment - Interactive Python environment
+  learning:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: learningspace
+    volumes:
+      # Mount code for live editing
+      - ./tasks:/app/tasks
+      - ./solutions:/app/solutions
+      - ./tests:/app/tests
+      - ./docs:/app/docs
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    command: bash
+
+  # Jupyter notebook server for interactive learning
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: learningspace-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./tasks:/app/tasks
+      - ./solutions:/app/solutions
+      - ./notebooks:/app/notebooks
+      - ./docs:/app/docs
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: >
+      bash -c "jupyter lab 
+               --ip=0.0.0.0 
+               --port=8888 
+               --no-browser 
+               --allow-root 
+               --NotebookApp.token='' 
+               --NotebookApp.password=''"
+
+  # Test runner - Runs all tests
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learningspace-test
+    volumes:
+      - ./tasks:/app/tasks
+      - ./solutions:/app/solutions
+      - ./tests:/app/tests
+    command: pytest tests/ -v --cov=solutions --cov-report=term
+
+  # Production container
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learningspace-prod
+    volumes:
+      - ./tasks:/app/tasks:ro
+      - ./solutions:/app/solutions:ro
+      - ./tests:/app/tests:ro
+    command: python run_example.py
