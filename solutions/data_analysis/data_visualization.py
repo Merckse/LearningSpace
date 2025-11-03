@@ -53,7 +53,7 @@ def create_scatter_plot(x, y, title="Scatter Plot"):
 def create_box_plot(data, labels=None, title="Box Plot"):
     """Create box plot."""
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.boxplot(data, labels=labels)
+    ax.boxplot(data, tick_labels=labels)
     ax.set_title(title)
     ax.set_ylabel("Values")
     return fig
