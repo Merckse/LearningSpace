@@ -21,14 +21,24 @@ LearningSpace/
 │   ├── algorithms/
 │   ├── mathematics/
 │   └── data_analysis/
-└── tests/             # Test files to validate your solutions
+├── tests/              # Test files to validate your solutions
+├── docs/               # Documentation on tools and best practices
+│   ├── basics/         # Requirements.txt guide
+│   ├── docker/         # Docker tutorials
+│   └── makefiles/      # Makefile guides
+├── Dockerfile          # Container configuration
+├── docker-compose.yml  # Multi-container setup
+└── Makefile           # Build automation
 ```
 
 ## 🚀 Getting Started
 
+### Quick Start (Traditional)
+
 1. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
+   # Or use: make install
    ```
 
 2. **Choose a Task**
@@ -39,7 +49,35 @@ LearningSpace/
 3. **Test Your Solution**
    ```bash
    python -m pytest tests/
+   # Or use: make test
    ```
+
+### Quick Start (Docker)
+
+```bash
+# Build and run with Docker
+make docker-build
+make docker-test
+
+# Or use Docker Compose
+docker-compose up test
+
+# Interactive environment
+docker-compose run learning
+```
+
+### Quick Start (Automated with Make)
+
+```bash
+# See all available commands
+make help
+
+# Quick setup
+make quickstart
+
+# Run examples
+make run-examples
+```
 
 ## 📚 Task Categories
 
@@ -86,10 +124,39 @@ python -m pytest tests/test_mathematics.py
 python -m pytest tests/test_data_analysis.py
 ```
 
-## 📖 Learning Path
+## 📖 Learning Paths
 
-**Beginner**: Start with basic mathematics and simple algorithms
-**Intermediate**: Move to recursion, sorting, and data analysis
-**Advanced**: Tackle dynamic programming and complex data analysis
+### Python Learning Path
+**Beginner**: Start with basic mathematics and simple algorithms  
+**Intermediate**: Move to recursion, sorting, and data analysis  
+**Advanced**: Tackle dynamic programming and complex data analysis  
+
+👉 See [LEARNING_ROADMAP.md](LEARNING_ROADMAP.md) for detailed curriculum
+
+### DevOps Learning Path
+Learn essential development tools:
+1. **Requirements.txt** - Dependency management → [Guide](docs/basics/requirements_txt_guide.md)
+2. **Docker** - Containerization → [Basics](docs/docker/docker_basics.md) | [Dockerfile](docs/docker/dockerfile_guide.md) | [Compose](docs/docker/docker_compose.md)
+3. **Makefiles** - Build automation → [Guide](docs/makefiles/makefile_basics.md)
+
+👉 See [docs/README.md](docs/README.md) for complete documentation index
+
+## 🛠️ Available Tools
+
+This project includes ready-to-use configurations:
+
+- **Makefile** - Run `make help` to see all commands
+- **Dockerfile** - Containerize the learning environment
+- **docker-compose.yml** - Multi-container setup with Jupyter
+- **Comprehensive Documentation** - In the `docs/` folder
+
+## 📚 Documentation
+
+- [QUICKSTART.md](QUICKSTART.md) - Get started immediately
+- [LEARNING_ROADMAP.md](LEARNING_ROADMAP.md) - 8-week structured curriculum
+- [docs/](docs/) - Tools and best practices guides
+  - Requirements.txt management
+  - Docker tutorials
+  - Makefile automation
 
 Happy Learning! 🐍
