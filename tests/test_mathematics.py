@@ -16,11 +16,11 @@ class TestNumberTheory:
     """Test number theory functions"""
     
     def test_is_prime(self):
-        assert number_theory.is_prime(7) == True
-        assert number_theory.is_prime(10) == False
-        assert number_theory.is_prime(2) == True
-        assert number_theory.is_prime(1) == False
-        assert number_theory.is_prime(13) == True
+        assert number_theory.is_prime(7)
+        assert not number_theory.is_prime(10)
+        assert number_theory.is_prime(2)
+        assert not number_theory.is_prime(1)
+        assert number_theory.is_prime(13)
     
     def test_sieve_of_eratosthenes(self):
         assert number_theory.sieve_of_eratosthenes(20) == [2, 3, 5, 7, 11, 13, 17, 19]
@@ -41,9 +41,9 @@ class TestNumberTheory:
         assert number_theory.prime_factorization(100) == [2, 2, 5, 5]
     
     def test_is_perfect_number(self):
-        assert number_theory.is_perfect_number(6) == True
-        assert number_theory.is_perfect_number(28) == True
-        assert number_theory.is_perfect_number(12) == False
+        assert number_theory.is_perfect_number(6)
+        assert number_theory.is_perfect_number(28)
+        assert not number_theory.is_perfect_number(12)
     
     def test_nth_fibonacci_modulo(self):
         assert number_theory.nth_fibonacci_modulo(10, 1000) == 55
@@ -73,9 +73,9 @@ class TestGeometry:
         assert geometry.rectangle_area(10, 10) == 100
     
     def test_is_right_triangle(self):
-        assert geometry.is_right_triangle(3, 4, 5) == True
-        assert geometry.is_right_triangle(5, 12, 13) == True
-        assert geometry.is_right_triangle(1, 2, 3) == False
+        assert geometry.is_right_triangle(3, 4, 5)
+        assert geometry.is_right_triangle(5, 12, 13)
+        assert not geometry.is_right_triangle(1, 2, 3)
     
     def test_polygon_area_shoelace(self):
         assert geometry.polygon_area_shoelace([(0, 0), (4, 0), (4, 3), (0, 3)]) == 12.0
