@@ -180,6 +180,68 @@ This roadmap provides a progressive learning path from beginner to advanced topi
 
 ---
 
+## 🛠️ Level 5: DevOps Fundamentals (Week 9-10)
+
+### Goals
+- Learn Docker containerization
+- Master Dockerfile writing
+- Understand multi-container orchestration
+- Automate tasks with Makefiles
+
+### Tasks to Complete
+
+#### Day 67-70: Docker Basics
+- [ ] `docker_basics.py` - task_1_hello_world()
+- [ ] `docker_basics.py` - task_2_interactive_ubuntu()
+- [ ] `docker_basics.py` - task_3_nginx_web_server()
+- [ ] `docker_basics.py` - task_4_volume_mounting()
+- [ ] `docker_basics.py` - task_5_environment_variables()
+- [ ] `docker_basics.py` - task_6_image_management()
+- [ ] `docker_basics.py` - task_7_container_inspection()
+- [ ] `docker_basics.py` - task_8_cleanup()
+
+**Learning Focus**: Docker CLI, containers, images, volumes
+
+#### Day 71-74: Dockerfile Writing
+- [ ] `dockerfile_tasks.py` - task_1_simple_python_app()
+- [ ] `dockerfile_tasks.py` - task_2_app_with_dependencies()
+- [ ] `dockerfile_tasks.py` - task_3_flask_web_app()
+- [ ] `dockerfile_tasks.py` - task_4_multi_stage_build()
+- [ ] `dockerfile_tasks.py` - task_5_environment_variables()
+- [ ] `dockerfile_tasks.py` - task_6_non_root_user()
+- [ ] `dockerfile_tasks.py` - task_7_dockerignore()
+- [ ] `dockerfile_tasks.py` - task_8_health_check()
+
+**Learning Focus**: Dockerfile optimization, security, best practices
+
+#### Day 75-78: Docker Compose
+- [ ] `docker_compose_tasks.py` - task_1_simple_web_app()
+- [ ] `docker_compose_tasks.py` - task_2_app_with_database()
+- [ ] `docker_compose_tasks.py` - task_3_development_environment()
+- [ ] `docker_compose_tasks.py` - task_4_multi_tier_application()
+- [ ] `docker_compose_tasks.py` - task_5_environment_files()
+- [ ] `docker_compose_tasks.py` - task_6_networking()
+- [ ] `docker_compose_tasks.py` - task_7_scaling_services()
+- [ ] `docker_compose_tasks.py` - task_8_production_setup()
+
+**Learning Focus**: Multi-container apps, service orchestration, networking
+
+#### Day 79-82: Makefile Automation
+- [ ] `makefile_tasks.py` - task_1_hello_makefile()
+- [ ] `makefile_tasks.py` - task_2_python_project()
+- [ ] `makefile_tasks.py` - task_3_dependencies()
+- [ ] `makefile_tasks.py` - task_4_variables()
+- [ ] `makefile_tasks.py` - task_5_pattern_rules()
+- [ ] `makefile_tasks.py` - task_6_docker_integration()
+- [ ] `makefile_tasks.py` - task_7_conditional_execution()
+- [ ] `makefile_tasks.py` - task_8_complete_project()
+
+**Learning Focus**: Build automation, task management, Docker integration
+
+**Checkpoint**: Can you containerize an application? Write production-ready Makefiles?
+
+---
+
 ## 🚀 Beyond the Basics
 
 ### Next Steps After Completion
@@ -218,8 +280,9 @@ Use this checklist to track your journey:
 - [ ] Level 2: Intermediate (Completed: __/14 tasks)
 - [ ] Level 3: Advanced Algorithms (Completed: __/9 tasks)
 - [ ] Level 4: Data Analysis (Completed: __/25 tasks)
+- [ ] Level 5: DevOps Fundamentals (Completed: __/32 tasks)
 
-**Total Progress: __/62 tasks completed**
+**Total Progress: __/94 tasks completed**
 
 ---
 
