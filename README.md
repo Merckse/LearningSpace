@@ -16,7 +16,8 @@ LearningSpace/
 ├── tasks/              # Task descriptions and starter code
 │   ├── algorithms/     # Algorithm-focused exercises
 │   ├── mathematics/    # Mathematical problems
-│   └── data_analysis/  # Data analysis tasks
+│   ├── data_analysis/  # Data analysis tasks
+│   └── devops/         # DevOps and tooling practice
 ├── solutions/          # Reference solutions
 │   ├── algorithms/
 │   ├── mathematics/
@@ -102,6 +103,12 @@ make run-examples
 - Numpy array operations
 - Real-world dataset analysis
 
+### DevOps (tasks/devops/)
+- Docker basics and CLI commands
+- Writing Dockerfiles and optimization
+- Docker Compose for multi-container apps
+- Makefile creation and automation
+
 ## 💡 Tips
 
 - Start with easier tasks and progress to more complex ones
@@ -122,6 +129,9 @@ python -m pytest tests/test_mathematics.py
 
 # Test data analysis only
 python -m pytest tests/test_data_analysis.py
+
+# Test devops tasks structure
+python -m pytest tests/test_devops.py
 ```
 
 ## 📖 Learning Paths
